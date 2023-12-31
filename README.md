@@ -77,7 +77,8 @@ View the data saved in the database - MySQL.
 [Image_3](https://github.com/Chindhu-Alagappan/BizCardX-Extracting-Business-Card-Data-with-OCR/blob/f33bb5f3c890e4791ebff5d48c7c88a58e8b5407/Snapshots%20-%20output/Image_3.png)
 
 ### Update Tab
-Has the ability to choose the image data where the updation has to be made in the DB, by selecting the card number (ie) image name, field and new value to update. [Image_4](https://github.com/Chindhu-Alagappan/BizCardX-Extracting-Business-Card-Data-with-OCR/blob/f33bb5f3c890e4791ebff5d48c7c88a58e8b5407/Snapshots%20-%20output/Image_4.png)
+Has the ability to choose the image data where the updation has to be made in the DB, by selecting the card number (ie) image name, field and new value to update. 
+ [Image_4](https://github.com/Chindhu-Alagappan/BizCardX-Extracting-Business-Card-Data-with-OCR/blob/f33bb5f3c890e4791ebff5d48c7c88a58e8b5407/Snapshots%20-%20output/Image_4.png)
 
 ### Delete Tab
 We can delete the records of the extracted image from the DB, through this tab, by providing the card number (ie) image name to delete.  
