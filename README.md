@@ -9,11 +9,15 @@ Optical Character Recognition (OCR) is a process of converting images of typed, 
 2. Technology Stacks 
 3. Usage
 4. Image Processing with EasyOCR  
-5. Storing in MongoDB
-7. Migrating to MySQL
-8. Querying
-9. Viewing and Visualization
-10. Further Improvements
+5. Formatting the fields extracted
+6. Building Streamlit GUI
+   - BizCardX Tab
+   - Upload Tab
+   - View Tab
+   - Update Tab
+   - Delete tab
+7. MySQL Table Schema
+8. Further Improvements
 
 ## Pre-requsites
 Install the following packages to run the project. 
@@ -49,7 +53,7 @@ The resultant output consists of information such as the 4 co-ordinates [(x1,y1)
 
 ## Formatting the fields extracted
 The extracted text has to be categorized and formatted into the following.  
-1. Card_No - Business card number - Image name must be in number format
+1. Card_No - Business card number - *Image name must be in number format*
 2. Name - Name of card holder
 3. Role - Role of the person in the company
 4. Company - Company name
@@ -60,25 +64,24 @@ The extracted text has to be categorized and formatted into the following.
 
 ## Building Streamlit GUI
 ### BizCardX Tab
-Contains basic information of the tool.
-![Image_1](https://github.com/Chindhu-Alagappan/BizCardX-Extracting-Business-Card-Data-with-OCR/blob/f33bb5f3c890e4791ebff5d48c7c88a58e8b5407/Snapshots%20-%20output/Image_1.png)
+Contains basic information of the tool.  
+[Image_1](https://github.com/Chindhu-Alagappan/BizCardX-Extracting-Business-Card-Data-with-OCR/blob/f33bb5f3c890e4791ebff5d48c7c88a58e8b5407/Snapshots%20-%20output/Image_1.png)
 
 ### Upload Tab
-Provides the ability to upload image and view the extracted text in a readable from the image.  
-If we wish to save to the database we can do so, by hitting the *Save* button.  
-![Image_2](https://github.com/Chindhu-Alagappan/BizCardX-Extracting-Business-Card-Data-with-OCR/blob/f33bb5f3c890e4791ebff5d48c7c88a58e8b5407/Snapshots%20-%20output/Image_2.png)
+Provides the ability to upload image and view the extracted text in a readable from the image.    
+If we wish to save to the database we can do so, by hitting the *Save* button.    
+[Image_2](https://github.com/Chindhu-Alagappan/BizCardX-Extracting-Business-Card-Data-with-OCR/blob/f33bb5f3c890e4791ebff5d48c7c88a58e8b5407/Snapshots%20-%20output/Image_2.png)
 
 ### View Tab
-View the data saved in the database - MySQL.  
-![Image_3](https://github.com/Chindhu-Alagappan/BizCardX-Extracting-Business-Card-Data-with-OCR/blob/f33bb5f3c890e4791ebff5d48c7c88a58e8b5407/Snapshots%20-%20output/Image_3.png)
+View the data saved in the database - MySQL.    
+[Image_3](https://github.com/Chindhu-Alagappan/BizCardX-Extracting-Business-Card-Data-with-OCR/blob/f33bb5f3c890e4791ebff5d48c7c88a58e8b5407/Snapshots%20-%20output/Image_3.png)
 
 ### Update Tab
-Has the ability to choose the image data where the updation has to be made in the DB, by selecting the card number (ie) image name, field and new value to update.
-![Image_4](https://github.com/Chindhu-Alagappan/BizCardX-Extracting-Business-Card-Data-with-OCR/blob/f33bb5f3c890e4791ebff5d48c7c88a58e8b5407/Snapshots%20-%20output/Image_4.png)
+Has the ability to choose the image data where the updation has to be made in the DB, by selecting the card number (ie) image name, field and new value to update. [Image_4](https://github.com/Chindhu-Alagappan/BizCardX-Extracting-Business-Card-Data-with-OCR/blob/f33bb5f3c890e4791ebff5d48c7c88a58e8b5407/Snapshots%20-%20output/Image_4.png)
 
 ### Delete Tab
-We can delete the records of the extracted image from the DB, through this tab, by providing the card number (ie) image name to delete.
-![Image_5](https://github.com/Chindhu-Alagappan/BizCardX-Extracting-Business-Card-Data-with-OCR/blob/f33bb5f3c890e4791ebff5d48c7c88a58e8b5407/Snapshots%20-%20output/Image_5.png)
+We can delete the records of the extracted image from the DB, through this tab, by providing the card number (ie) image name to delete.  
+[Image_5](https://github.com/Chindhu-Alagappan/BizCardX-Extracting-Business-Card-Data-with-OCR/blob/f33bb5f3c890e4791ebff5d48c7c88a58e8b5407/Snapshots%20-%20output/Image_5.png)
 
 ## MySQL Table Schema  
 **Table : User1**  
