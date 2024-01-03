@@ -1,6 +1,35 @@
 # Import necessary packages
 import streamlit as st
 import mysql.connector
+import pandas as pd
+
+# --------------Executing MySQL queries--------------------------------
+
+def ExecuteQuery(mycursor, query):
+    mycursor.execute(query)
+    res = mycursor.fetchall()
+    return pd.DataFrame(res)
+
+def ExecuteQueryWithData(mycursor, query, data):
+    mycursor.execute(query, data)
+    res = mycursor.fetchall()
+    return pd.DataFrame(res)
+
+def ExecuteQueryWithHeadings(mycursor, query):
+    mycursor.execute(query)
+    res = mycursor.fetchall()
+    field_headings = [i[0] for i in mycursor.description]
+    return pd.DataFrame(res, columns = field_headings)
+
+# Retrieving all data stored in DB
+def RetrieveImageDetails(mycursor, user_name):
+    query = 'SELECT * from '+user_name
+    st.dataframe(ExecuteQueryWithHeadings(mycursor, query))
+
+# -------------Retrieving the CardNumbers to Update-----------------------------
+def getCardNumbers(mycursor, user_name):
+    query = 'SELECT Card_No from '+user_name
+    return ExecuteQuery(mycursor, query)
 
 # ------------ Main Method --------------------------------------------
 def main():
