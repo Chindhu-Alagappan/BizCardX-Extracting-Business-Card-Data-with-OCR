@@ -1,19 +1,7 @@
 # Import necessary packages
 import streamlit as st
 from streamlit import session_state as ss
-import pandas as pd
-
-# Executing MySQL queries
-def ExecuteQuery(mycursor, query):
-    mycursor.execute(query)
-    res = mycursor.fetchall()
-    field_headings = [i[0] for i in mycursor.description]
-    return pd.DataFrame(res, columns = field_headings)
-
-# Retrieving all data stored in DB
-def RetrieveImageDetails(mycursor, user_name):
-    query = 'SELECT * from '+user_name
-    st.dataframe(ExecuteQuery(mycursor, query))
+from Bizcard import RetrieveImageDetails
 
 # Retrieving the session state variables
 mycursor = ss['mycursor']

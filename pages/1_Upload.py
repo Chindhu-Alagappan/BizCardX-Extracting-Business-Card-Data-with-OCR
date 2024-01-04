@@ -233,7 +233,7 @@ try :
                                          type=['png', 'jpg', 'jpeg'])
         extract_submitted = st.form_submit_button(':violet[Extract]')
 
-    if extract_submitted or ss.button_clicked :
+    if extract_submitted or ss.button_clicked:
             ss.button_clicked = True
             image = Image.open(uploaded_file) 
             st.write(':violet[Original Image]')
